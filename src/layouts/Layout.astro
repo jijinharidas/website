@@ -1,0 +1,88 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --white: #efefef;
+    --black: #252525;
+  }
+
+  @font-face {
+    font-family: "iA Writer Mono";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-mono@latest/latin-400-normal.woff2)
+        format("woff2"),
+      url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-mono@latest/latin-400-normal.woff)
+        format("woff");
+  }
+
+  @font-face {
+    font-family: "iA Writer Mono";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-mono@latest/latin-700-normal.woff2)
+        format("woff2"),
+      url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-mono@latest/latin-700-normal.woff)
+        format("woff");
+  }
+
+  @font-face {
+    font-family: "iA Writer Mono";
+    font-style: italic;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-mono@latest/latin-400-italic.woff2)
+        format("woff2"),
+      url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-mono@latest/latin-400-italic.woff)
+        format("woff");
+  }
+
+  @font-face {
+    font-family: "iA Writer Mono";
+    font-style: italic;
+    font-display: swap;
+    font-weight: 700;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-mono@latest/latin-700-italic.woff2)
+        format("woff2"),
+      url(https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-mono@latest/latin-700-italic.woff)
+        format("woff");
+  }
+
+  html {
+    font-family: "IA Writer Mono", system-ui, sans-serif;
+    background-size: 224px;
+    background-color: --var(white);
+  }
+
+  a {
+    color: var(--black);
+    text-decoration-thickness: 0.3ex;
+    text-underline-offset: 0.3ex;
+  }
+
+  a:hover {
+    font-weight: bold;
+  }
+</style>

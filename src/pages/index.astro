@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import Bio from '../components/Bio.astro';
+import Links from '../components/Links.astro';
+---
+
+<Layout title="Jijin K Haridas">
+  <main>
+    <Header/>
+    <Links />
+    <Bio/>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: 50px auto;
+    padding: 5px;
+    width: 650px;
+    max-width: 650px;
+    font-size: 20px;
+    font-family: "iA Writer Mono", monospace; /* Apply iA Writer Mono font here */
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .bio {
+    line-height: 1.6;
+    font-size: clamp(1rem, 0.96rem + 0.22vw, 1.125rem);
+  }
+</style>
